@@ -1,0 +1,212 @@
+@font-face {
+  font-family: Avenir;
+  src: url("../Assets/fonts/AvenirNextLTPro-Regular.otf") format("otf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Avenir;
+  src: url("../Assets/fonts/AvenirNextLTPro-Demi.otf") format("otf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Avenir;
+  src: url("../Assets/fonts/AvenirNextLTPro-Bold.otf") format("otf");
+  font-weight: bold;
+  font-style: normal;
+}
+.menu-header {
+  background-color: #323232;
+  text-align: center;
+  padding: 10px 0;
+}
+.menu-header .menu-header nav {
+  display: flex;
+  align-items: center;
+}
+.menu-header ul {
+  padding: 0;
+}
+.menu-header ul li {
+  display: inline-block;
+}
+.menu-header ul li:first-child {
+  margin-right: 5rem;
+}
+.menu-header ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: bold;
+}
+.menu-header .button {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+.menu-header .button::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1.5rem;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+.menu-header .button:hover::after {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .menu-header {
+    background-color: #323232;
+    padding: 1rem;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    margin-left: 2rem;
+  }
+  ul li:first-child {
+    margin-right: 4rem;
+  }
+  ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+  }
+}
+.herocontent {
+  position: relative;
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(../Assets/Images/hero-bio.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(50, 50, 50, 0.5);
+  height: 50vh;
+  width: auto;
+}
+
+.text-content {
+  position: relative;
+  top: 35%;
+  color: white;
+  text-align: left;
+  width: 100%;
+  margin-left: 1rem;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  font-family: "Avenir";
+  margin: 1rem;
+}
+.bio .bio-text-1 {
+  font-weight: bold;
+  line-height: 2;
+}
+.bio .bio-text-2 {
+  font-weight: 600;
+  line-height: 2;
+}
+.bio .bio-text-3 {
+  font-weight: 400;
+}
+.bio .bio-text-3 img {
+  margin: 1rem;
+  max-width: calc(100% - 2rem);
+}
+
+.shows {
+  background-color: #e1e1e1;
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.shows .gallery-title {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.shows > div {
+  width: calc(33.33% - 2rem);
+  margin: 1rem;
+}
+.shows img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 728px) {
+  .shows > div {
+    width: calc(100% - 2rem);
+  }
+}
+
+.Contact {
+  font-family: "Avenir";
+  background-color: #323232;
+  color: #ffffff;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.Contact > div {
+  width: 100%;
+}
+@media (min-width: 729px) {
+  .Contact > div.manage, .Contact > div.artist, .Contact > div.arch {
+    width: calc(33.33% - 1rem);
+  }
+}
+@media (max-width: 728px) {
+  .Contact {
+    flex-direction: column;
+  }
+}
+.Contact img {
+  height: 2rem;
+  margin: 0 4rem 2rem 1rem;
+}
+.Contact p, .Contact h1, .Contact strong, .Contact a {
+  margin-left: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+.Contact em {
+  font-style: normal;
+  color: yellow;
+  margin: 0%;
+}
+@media (min-width: 728px) {
+  .Contact .logo img {
+    display: block;
+    width: 50%;
+    display: none;
+  }
+}
+@media (max-width: 728px) {
+  .Contact .logo-1 img {
+    display: none;
+    width: 50%;
+  }
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}/*# sourceMappingURL=bio.css.map */

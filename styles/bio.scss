@@ -1,0 +1,245 @@
+@font-face {
+  font-family: Avenir;
+  src: url("../Assets/fonts/AvenirNextLTPro-Regular.otf") format("otf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Avenir;
+  src: url("../Assets/fonts/AvenirNextLTPro-Demi.otf") format("otf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Avenir;
+  src: url("../Assets/fonts/AvenirNextLTPro-Bold.otf") format("otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+$BandSite-Black: #323232;
+$Silver: #afafaf;
+$Mercury: #e1e1e1;
+$Alabaster: #fafafa;
+$text-color: #ffffff;
+
+//default for mobile device
+.menu-header {
+  background-color: $BandSite-Black;
+  text-align: center;
+  padding: 10px 0;
+
+  .menu-header nav {
+    display: flex;
+    align-items: center;
+  }
+
+  ul {
+    padding: 0;
+
+    li {
+      display: inline-block;
+
+      &:first-child {
+        margin-right: 5rem; // spacing between menu items
+      }
+
+      a {
+        color: $text-color;
+        text-decoration: none;
+        font-size: 10px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .button {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .button::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -1.5rem;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+  }
+
+  .button:hover::after {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  //for tablets & laptops
+  .menu-header {
+    background-color: $BandSite-Black;
+    padding: 1rem;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    margin-left: 2rem;
+
+    li {
+      &:first-child {
+        margin-right: 4rem;
+      }
+      a {
+        color: $text-color;
+        text-decoration: none;
+        font-size: 10px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.herocontent {
+  position: relative;
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(../Assets/Images/hero-bio.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(50, 50, 50, 0.5);
+  height: 50vh;
+  width: auto;
+}
+
+.text-content {
+  position: relative;
+  top: 35%;
+  color: white;
+  text-align: left;
+  width: 100%;
+  margin-left: 1rem;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  font-family: "Avenir";
+  margin: 1rem;
+
+  .bio-text-1 {
+    font-weight: bold;
+    line-height: 2;
+  }
+  .bio-text-2 {
+    font-weight: 600;
+    line-height: 2;
+  }
+  .bio-text-3 {
+    font-weight: 400;
+    img {
+      margin: 1rem;
+      max-width: calc(100% - 2rem);
+    }
+  }
+}
+
+  .shows {
+    background-color: $Mercury;
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap; // image auto-swap
+    justify-content: space-between;
+
+    .gallery-title {
+      width: 100%; // solev title-img conflict
+      margin-bottom: 1rem;
+    }
+
+    > div {
+      width: calc(33.33% - 2rem); // each dive took up 1/3 page
+      margin: 1rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 728px) {
+      > div {
+        width: calc(100% - 2rem); // each div took up 100% under 728px
+      }
+    }
+  }
+
+  .Contact {
+    font-family: "Avenir";
+    background-color: $BandSite-Black;
+    color: #ffffff;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    > div {
+      width: 100%;
+
+      &.manage,
+      &.artist,
+      &.arch {
+        @media (min-width: 729px) {
+          width: calc(33.33% - 1rem);
+        }
+      }
+    }
+
+    @media (max-width: 728px) {
+      flex-direction: column;
+    }
+
+    img {
+      height: 2rem;
+      margin: 0 4rem 2rem 1rem;
+    }
+    p, h1, strong, a {
+      margin-left: 1rem;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    em {
+      font-style: normal;
+      color: yellow;
+      margin: 0%;
+    }
+    .logo img {
+      @media (min-width: 728px) {
+        display: block;
+        width: 50%;
+        display: none; // when bigger than 728px hide this logo
+      }
+    }
+    .logo-1 img {
+      @media (max-width: 728px) {
+        display: none; // // when smaller than 728px hide this logo
+        width: 50%;
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
