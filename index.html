@@ -3,12 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="./styles/bio.css"
-      rel="stylesheet"
-    />
+    <link href="./styles/bio.css" rel="stylesheet"/>
 
-    <title>Band Stie</title>
+    <title>Band Site</title>
   </head>
 
   <body>
@@ -21,7 +18,7 @@
             </a>
             <ul>
               <li><a href="#about-section" class="button">Biography</a></li>
-              <li><a href="#shows" clas="button">Shows</a></li>
+              <li><a href="#shows" >Shows</a></li>
             </ul>
           </div>
         </nav>
@@ -34,15 +31,17 @@
     </header>
 
     <section id="about-section">
+      <h1>About the Musicians</h1>
       <div class="bio">
-        <h1>About the Musicians</h1>
+       
+       
         <img src="./assets/Images/band.jpg" alt="band" />
 
         <div class="bio-text-1">
           <p>“We push each other to be the best. It’s not 
             uncommon for one of us to say ‘this needs 
             to be better, back to the drawing board’”
-            - Lead vocalist of The Bees Knees</p>
+            <br>- Lead vocalist of The Bees Knees</p>
             <div class="bio-text-2">
               <p>The Bees Knees</p>
             </div>
@@ -60,6 +59,8 @@
                 succeed even further with more support, 
                 pushing The Bees Knees to sign with a well 
                 known record label. </p>
+            </div>
+            <div class="bio-text-4">
              <p>
                 From there, the band has soared, gaining 
                 international recognition and ranking in the 
@@ -74,6 +75,7 @@
                 their second studio album, looking to be 
                 released in early 2024.</p>
             </div>
+          
         </div>
       </div>
 
@@ -93,11 +95,42 @@
        
     </section>
 
+    <section id="comments">
+  
+      <div class="comments-section">
+        <h1>Join the Conversation</h1>
+        <form id="comment-form">
+          <p>NAME</p> 
+          <div class="profile"></div>
+          <div class="form-group">
+            <input type="text" id="name" placeholder=" Enter your name" required>
+          </div>
+          <p>COMMENT</p> 
+          <div class="form-group">
+            <textarea id="comment" placeholder=" Add a new comment" required></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit">COMMENT</button>
+          </div>
+        </form>
+        <ul id="comments-list"></ul>
+      </div>
+    
+
+      <script src="./scripts/index-page.js"></script>
+
+    </section>
+
+
+
+    
+
     <footer>
       <div class="Contact">
-      <h1>Get in Touch</h1>
+        <div class="footer-h1">
+      <h1>Get in Touch</h1></div>
       
-        <div><a href="http://www.instagram.com"
+        <div class="socialmedia"><a href="http://www.instagram.com"
         ><img src="./assets/icons/SVG/Icon-instagram.svg" alt="Instagram"
       /></a>
       <a href="http://www.facebook.com"
@@ -105,7 +138,7 @@
       /></a>
       <a href="http://www.twitter.com"
         ><img src="./assets/Icons/SVG/Icon-twitter.svg" alt="twitter"
-      /></a>
+      /></a></div>
       <div class="logo-1">
         <a href="./index.html">
           <img src="./Assets/logos/Logo-bandsite.svg" alt="logo" />
@@ -113,25 +146,29 @@
     </div>
 
       <div class="manage">
-      <strong>The Bees Knees Management</strong>
+      <strong>The Bees Knees Management</strong>   <br>
         <p>503 Broadway Penthouse,</p>
 
-         <p> New York, NY 10012, USA</p>
+         <p> New York, NY 10012, USA</p>  <br>
          <a href="mailto:info@thebeesknees.com">info@thebeesknees.com</a>
+       
       </div>
 
       <div class="artist"> 
-          <strong>Limitless Artist Group</strong>
+    
+          <strong>Limitless Artist Group</strong>   <br>
           <p>Booking Agent for</p>
 
-           <p> US / South America / Japan</p>
+           <p> US / South America / Japan</p>   <br>
            <a href="mailto:bookings@limitlessag.com">bookings@limitlessag.com</a>
+        
       </div>
-      <div>
-          <strong class="arch">ARCH Entertainment</strong>
-          <p><em>Booking Agent</em> for</p>
+      <div class="arch">
 
-          <p> UK / EU / AU</p>
+          <strong>ARCH Entertainment</strong> <br>
+          <p>Booking Agent for</p>
+
+          <p> UK / EU / AU</p>   <br>
           <a href="mailto:bookings@archentertainment.com">bookings@archentertainment.com</a>
           </div>
 
