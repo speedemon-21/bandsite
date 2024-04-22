@@ -1,0 +1,315 @@
+@font-face {
+    font-family: Avenir;
+    src: url("../Assets/fonts/AvenirNextLTPro-Regular.otf") format("otf");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: Avenir;
+    src: url("../Assets/fonts/AvenirNextLTPro-Demi.otf") format("otf");
+    font-weight: 600;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: Avenir;
+    src: url("../Assets/fonts/AvenirNextLTPro-Bold.otf") format("otf");
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  $BandSite-Black: #323232;
+  $Silver: #afafaf;
+  $Mercury: #e1e1e1;
+  $Alabaster: #fafafa;
+  $text-color: #ffffff;
+  
+  //default for mobile device
+  .menu-header {
+    background-color: $BandSite-Black;
+    text-align: center;
+    padding: 10px 0;
+  
+    .menu-header nav {
+      display: flex;
+      align-items: center;
+    }
+  
+    ul {
+      padding: 0;
+  
+      li {
+        display: inline-block;
+  
+        &:first-child {
+          margin-right: 5rem; // spacing between menu items
+        }
+  
+        a {
+          color: $text-color;
+          text-decoration: none;
+          font-size: 10px;
+          font-weight: bold;
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      .button {
+        color:$text-color;
+        text-decoration: none;
+        position: relative;
+      }
+  
+      .button:hover::after {
+        content: "";
+        position: absolute;
+        right: -2rem;
+        bottom: -1.7rem;
+        width: 50vw;
+        height: 0.188rem;
+        background-color: $text-color;
+      }
+    }
+  }
+  
+  @media (min-width: 768px) {
+    //for tablets & laptops
+    .menu-header {
+      background-color: $BandSite-Black;
+      padding: 1rem;
+    }
+  
+    .button:hover::after {
+      content: "";
+      position: absolute;
+      left: 13.2rem;
+      top: 5.8rem;
+      width: 4rem;
+      height: 0.1rem;
+      background-color: $text-color;
+    }
+  
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-left: 3rem;
+    }
+  
+    ul {
+      list-style: none;
+      display: flex;
+      margin-left: 2rem;
+  
+      li {
+        &:first-child {
+          margin-right: 4rem;
+        }
+        a {
+          color: $text-color;
+          text-decoration: none;
+          font-size: 10px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  
+  .herocontent {
+    position: relative;
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+   // flex-direction: column;
+    background-image: url(../Assets/Images/hero-shows.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(50, 50, 50, 0.5);
+    height: 100%;
+    width: auto;
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 3rem;
+        max-width: 80%;
+    }
+  }
+  .soundcloud-player{
+    margin: 2em;
+    display: flex;
+  }
+  @media (max-width: 729px) {
+    .herocontent {
+        flex-direction: column;}
+  }
+
+
+  
+  .text-content {
+   display: inline-block;
+    position: relative;
+    top: 10%;
+    color: white;
+    text-align: left;
+    width: 100%;
+    margin-left: 5rem;
+  }
+  
+  /*About section*/
+  #about-section h1{
+    margin: 2rem;
+    font-family: Avenir;
+    font-size: 3rem;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .form-headings {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin: 0 0 1rem 1rem;
+    width: 80%;
+    color: $Silver
+  }
+  
+  .form-headings span {
+    flex-basis: 100%; 
+  }
+  
+  .show-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 2rem 0 2rem 1rem;
+  }
+  
+  .show-item span {
+    flex-basis: 10%; 
+  }
+
+  .book-button {
+    height: 40px;
+  border-radius: 4px;
+  background-color: #323232;
+  color: white;
+  border: none;
+  width: 20%;
+  
+  }
+  
+  .book-button:hover {
+    background-color: #000000;
+  }
+
+  @media screen and (max-width: 729px) {
+    .form-headings,
+    .show-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .form-headings{
+        display: none;
+    }
+    .show-item span {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  
+    .show-item {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+    .book-button {
+        width: 90%;
+    }
+  }
+  
+  
+  
+  /* footer section*/
+  
+  .Contact {
+    font-family: "Avenir";
+    background-color: $BandSite-Black;
+    color: #ffffff;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+
+  
+    > div {
+      width: 100%;
+  
+      &.manage,
+      &.artist,
+      &.arch {
+        @media (min-width: 729px) {
+          width: calc(33.33% - 2rem);
+        }
+      }
+    }
+  
+    @media (min-width: 729px) {
+      > div {
+        &.footer-h1,
+        &.socialmedia {
+          width: 29%;
+  
+          display: inline-block;
+          margin: 1rem 0rem 0rem 0rem;
+        }
+        &.logo-1 {
+          width: auto;
+          display: inline-block;
+          margin: 1rem 0rem 0rem 4rem;
+        }
+      }
+    }
+  
+    .logo {
+      margin-top: 4rem;
+    }
+  
+    .logo img {
+      @media (min-width: 728px) {
+        display: block;
+  
+        width: 50%;
+        margin: 0rem;
+        display: none; // when bigger than 728px hide this logo
+      }
+    }
+    .logo-1 img {
+      @media (max-width: 728px) {
+        display: none; // // when smaller than 728px hide this logo
+        width: 50%;
+      }
+    }
+  }
+  
+  footer {
+ 
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    img {
+      height: 2rem;
+      margin: 1.5rem 1rem 1rem 0rem;
+    }
+    p,
+    h1,
+    strong,
+    a {
+      margin-left: 1rem;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    em {
+      font-style: normal;
+      color: yellow;
+      margin: 0%;
+    }
+  }
+  
