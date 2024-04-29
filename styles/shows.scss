@@ -1,28 +1,6 @@
-@font-face {
-    font-family: Avenir;
-    src: url("../Assets/fonts/AvenirNextLTPro-Regular.otf") format("otf");
-    font-weight: 400;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: Avenir;
-    src: url("../Assets/fonts/AvenirNextLTPro-Demi.otf") format("otf");
-    font-weight: 600;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: Avenir;
-    src: url("../Assets/fonts/AvenirNextLTPro-Bold.otf") format("otf");
-    font-weight: bold;
-    font-style: normal;
-  }
-  
-  $BandSite-Black: #323232;
-  $Silver: #afafaf;
-  $Mercury: #e1e1e1;
-  $Alabaster: #fafafa;
-  $text-color: #ffffff;
-  
+@import url('./partials/font.scss');
+
+@media (max-width:768px) {
   //default for mobile device
   .menu-header {
     background-color: $BandSite-Black;
@@ -312,4 +290,4 @@
       margin: 0%;
     }
   }
-  
+}
